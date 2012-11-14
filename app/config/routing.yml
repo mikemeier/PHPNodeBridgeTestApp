@@ -2,3 +2,8 @@ DemoPHPNodeBridge:
   resource: "@mikemeierDemoPHPNodeBridge/Controller"
   type:     annotation
   prefix:   /
+
+PHPNodeBridge:
+  resource: "@mikemeierPHPNodeBridgeBundle/Controller"
+  type:     annotation
+  prefix:   /bridge
