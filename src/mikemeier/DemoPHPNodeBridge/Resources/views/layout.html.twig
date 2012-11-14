@@ -1,0 +1,30 @@
+<html>
+    <head>
+        {% block head %}
+            <title>{% block title %}PHPNodeBridge{% endblock title %}</title>
+
+            {% block style %}
+                <style type="text/css">
+                    body{
+                        font-family: verdana;
+                        font-size: 8pt;
+                    }
+                </style>
+            {% endblock style %}
+
+            {% block javascript %}
+                <script type="text/javascript" src="{{ bridge.socketIoClientUri }}"></script>
+                <script type="text/javascript">
+                    var socket = io.connect('{{ bridge.socketIoServerConnectionUri(identification) }}');
+                    socket.on('demo.event', function(paraA, paraB){
+                        console.log(paraA);
+                        console.log(paraB);
+                    });
+                </script>
+            {% endblock javascript %}
+        {% endblock head %}
+    </head>
+    <body>
+        {% block content %}{% endblock content %}
+    </body>
+</html>

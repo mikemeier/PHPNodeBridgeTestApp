@@ -20,6 +20,8 @@ class AppKernel extends Kernel
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new mikemeier\PHPNodeBridge\mikemeierPHPNodeBridgeBundle(),
+
+            new mikemeier\DemoPHPNodeBridge\mikemeierDemoPHPNodeBridge(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
