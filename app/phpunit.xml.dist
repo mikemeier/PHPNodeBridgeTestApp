@@ -14,9 +14,8 @@
     bootstrap                   = "bootstrap.php.cache" >
 
     <testsuites>
-        <testsuite name="Project Test Suite">
-            <directory>../src/*/*Bundle/Tests</directory>
-            <directory>../src/*/Bundle/*Bundle/Tests</directory>
+        <testsuite name="PHPNodeBridge">
+            <directory>../vendor/mikemeier/php-node-bridge/mikemeier/PHPNodeBridge/Tests</directory>
         </testsuite>
     </testsuites>
 
