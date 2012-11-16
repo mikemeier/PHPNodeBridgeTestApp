@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container
+        xmlns="http://symfony.com/schema/dic/services"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"
+        >
+
+    <!--
+        <parameters></parameters>
+    -->
+
+    <services>
+        <service id="mikemeier_php_node_bridge_test_app" class="mikemeier\DemoPHPNodeBridge\EventListener\ExampleListener">
+            <tag name="kernel.event_listener" event="mikemeier_php_node_bridge.returnvalue" method="onReturnValueEvent" />
+        </service>
+    </services>
+
+</container>

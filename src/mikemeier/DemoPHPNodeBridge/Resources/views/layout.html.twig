@@ -9,8 +9,11 @@
             }
         </style>
 
-        {{ phpnodebridgejs('bridge') }}
+        {% javascripts "@mikemeierPHPNodeBridgeBundle/Resources/public/js/bridge.js" %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
 
+        {{ phpnodebridgejs() }}
 
     </head>
     <body>
