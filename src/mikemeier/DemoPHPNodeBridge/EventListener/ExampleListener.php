@@ -16,4 +16,12 @@ class ExampleListener
         $event->addMessage(new Message('returnvalue', $event->getParameters()));
     }
 
+    /**
+     * @param Event $event
+     */
+    public function onTest(Event $event, $paraA)
+    {
+        $event->addMessage(new Message('hallodominik', array('success' => true, 'message' => 'huhu '. $paraA)));
+    }
+
 }
