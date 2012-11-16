@@ -18,6 +18,7 @@ class ExampleListener
 
     /**
      * @param Event $event
+     * @param $paraA
      */
     public function onTest(Event $event, $paraA)
     {

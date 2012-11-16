@@ -23,7 +23,8 @@
         "mikemeier/php-node-bridge": "master",
         "mikemeier/php-node-bridge-node-server": "master",
 
-        "phpunit/phpunit": "3.7.*"
+        "phpunit/phpunit": "3.7.*",
+        "mikey179/vfsStream": "dev-master"
     },
 
     "scripts": {
