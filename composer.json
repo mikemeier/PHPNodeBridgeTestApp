@@ -20,7 +20,9 @@
         "jms/security-extra-bundle": "1.2.*",
         "jms/di-extra-bundle": "1.1.*",
 
-        "mikemeier/php-node-bridge": "dev-master",
+        "mikemeier/php-node-bridge": "master",
+        "mikemeier/php-node-bridge-node-server": "master",
+
         "phpunit/phpunit": "3.7.*"
     },
 
@@ -58,6 +60,21 @@
                 "name": "mikemeier/php-node-bridge",
                 "source": {
                     "url": "https://github.com/mikemeier/PHPNodeBridge.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
+
+        {
+            "type": "package",
+            "package": {
+                "type": "library",
+                "target-dir": "mikemeier/PHPNodeBridgeNodeServer",
+                "version": "master",
+                "name": "mikemeier/php-node-bridge-node-server",
+                "source": {
+                    "url": "https://github.com/mikemeier/PHPNodeBridge-NodeServer.git",
                     "type": "git",
                     "reference": "master"
                 }
