@@ -1,0 +1,9 @@
+{% extends 'mikemeierDemoPHPNodeBridge::layout.html.twig' %}
+
+{% block content %}
+    <ul class="phpnodebridge userlist">
+        {% for user in users %}
+            <li>Identification: {{ user.identification }} / SocketIds: {{ user.socketIds|join(', ') }}</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
