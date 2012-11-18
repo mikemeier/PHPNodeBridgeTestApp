@@ -11,18 +11,10 @@ class ExampleListener
     /**
      * @param Event $event
      */
-    public function onReturnValueEvent(Event $event)
+    public function onNewIdentities(Event $event, array $newIdentities)
     {
-        $event->addMessage(new Message('returnvalue', $event->getParameters()));
-    }
-
-    /**
-     * @param Event $event
-     * @param $paraA
-     */
-    public function onTest(Event $event, $paraA)
-    {
-        $event->addMessage(new Message('hallodominik', array('success' => true, 'message' => 'huhu '. $paraA)));
+        $bridge = $event->getBridge();
+        $bridge->sendMessageToUsers(new Message('newidentities', $newIdentities), $bridge->getUserContainer()->getAll());
     }
 
 }

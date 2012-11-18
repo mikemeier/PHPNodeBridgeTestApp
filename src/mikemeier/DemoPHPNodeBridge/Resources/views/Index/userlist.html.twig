@@ -1,9 +1,25 @@
 {% extends 'mikemeierDemoPHPNodeBridge::layout.html.twig' %}
 
+{% block javascript %}
+    {{ parent() }}
+
+    <script type="text/javascript">
+        bridge.on('user.newidentities', function(users){
+            var userList = $('#content .userlist');
+            for(var identification in users){
+                var user = users[identification];
+                userList.append('<li class="user" data-identification="'+ identification +'">Identification'+ identification +' / SocketIds: '+ user.socketIds.join(", ") +'</li>')
+            }
+        });
+    </script>
+{% endblock javascript %}
+
 {% block content %}
-    <ul class="phpnodebridge userlist">
+    <ul class="userlist">
         {% for user in users %}
-            <li>Identification: {{ user.identification }} / SocketIds: {{ user.socketIds|join(', ') }}</li>
+            <li class="user" data-identification="{{ user.identification }}">
+                Identification: {{ user.identification }} / SocketIds: {{ user.socketIds|join(', ') }}
+            </li>
         {% endfor %}
     </ul>
 {% endblock content %}

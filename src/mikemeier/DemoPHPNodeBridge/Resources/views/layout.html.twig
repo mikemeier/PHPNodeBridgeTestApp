@@ -9,14 +9,21 @@
             }
         </style>
 
-        {% javascripts "@mikemeierPHPNodeBridgeBundle/Resources/public/js/bridge.js" %}
-            <script type="text/javascript" src="{{ asset_url }}"></script>
-        {% endjavascripts %}
+        {% block javascript %}
+            {% javascripts
+                "@mikemeierPHPNodeBridgeBundle/Resources/public/js/bridge.js"
+                "@mikemeierDemoPHPNodeBridge/Resources/public/js/jquery-1.8.3.js"
+            %}
+                <script type="text/javascript" src="{{ asset_url }}"></script>
+            {% endjavascripts %}
 
-        {{ phpnodebridgejs() }}
+            {{ phpnodebridgejs('bridge') }}
+        {% endblock javascript %}
 
     </head>
     <body>
-        {% block content %}{% endblock content %}
+        <div id="content">
+            {% block content %}{% endblock content %}
+        </div>
     </body>
 </html>

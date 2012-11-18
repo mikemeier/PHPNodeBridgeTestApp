@@ -12,8 +12,7 @@
 
     <services>
         <service id="mikemeier_php_node_bridge_test_app" class="mikemeier\DemoPHPNodeBridge\EventListener\ExampleListener">
-            <tag name="kernel.event_listener" event="mikemeier_php_node_bridge.returnvalue" method="onReturnValueEvent" />
-            <tag name="kernel.event_listener" event="mikemeier_php_node_bridge.hallodominik" method="onTest" />
+            <tag name="kernel.event_listener" event="mikemeier_php_node_bridge.user.newidentities" method="onNewIdentities" />
         </service>
     </services>
 
