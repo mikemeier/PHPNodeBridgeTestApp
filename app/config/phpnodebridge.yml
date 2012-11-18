@@ -1,0 +1,7 @@
+mikemeier_php_node_bridge:
+  config:
+    socketIoClientUri: "http://node.local:8080/socket.io/socket.io.js"
+    socketIoServerUri: "http://node.local:8080"
+    socketIoApiTokenName: "demo"
+    socketIoClientToken: "client"
+    socketIoServerToken: "server"

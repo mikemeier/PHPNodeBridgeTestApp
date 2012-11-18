@@ -15,7 +15,6 @@
 
 composer.phar
 composer.lock
-userstore.txt
 
 .externalToolBuilders
 
