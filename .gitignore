@@ -2,6 +2,7 @@
 /app/logs/
 /app/bootstrap_cache.php.cache
 /app/config/parameters.yml
+/app/config/deploy.yml
 /deps.lock
 /vendor/
 /web/bundles/
