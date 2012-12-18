@@ -14,6 +14,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
  */
 class IndexController extends Controller
 {
+
     /**
      * @Route("", name="index")
      * @Template()
@@ -41,4 +42,5 @@ class IndexController extends Controller
     {
         return $this->get('mikemeier_php_node_bridge.bridge');
     }
+
 }
