@@ -14,7 +14,13 @@ class ExampleListener
     public function onNewIdentities(Event $event, array $newIdentities)
     {
         $bridge = $event->getBridge();
-        $bridge->sendMessageToUsers(new Message('newidentities', $newIdentities), $bridge->getUserContainer()->getAll());
+        $bridge->sendMessageToUsers(new Message('user.newidentities', $newIdentities), $bridge->getUserContainer()->getAll());
+    }
+
+    public function onNewConnection(Event $event, array $newUsers)
+    {
+        $bridge = $event->getBridge();
+        $bridge->sendMessageToUsers(new Message('user.newconnections', $newUsers), $bridge->getUserContainer()->getAll());
     }
 
 }
