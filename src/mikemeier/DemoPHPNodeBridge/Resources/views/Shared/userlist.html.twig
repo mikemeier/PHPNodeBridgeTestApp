@@ -1,0 +1,21 @@
+<script type="text/javascript">
+    bridge.on('user.connection', function(response){
+        console.log(response);
+        //var userList = $('#content .userlist').html(response.newidentities.html);
+    });
+</script>
+
+<h1>Userlist</h1>
+
+<ul class="userlist">
+    {% for user in users %}
+        <li class="user" data-identification="{{ user.identification }}">
+            Identification: {{ user.identification }}
+            <ul class="socket">
+                {% for socket in user.socketIds %}
+                    <li data-socket="{{ socket }}">Socket: {{ socket }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
