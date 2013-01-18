@@ -1,29 +1,34 @@
 {
-    "name": "symfony/framework-standard-edition",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "name": "mYkon/php-nnodebridge-testapp",
+    "description": "The PHPNodeBridge TestApp",
     "autoload": {
         "psr-0": { "": "src/" }
     },
 
     "require": {
         "php": ">=5.3.3",
+
         "symfony/symfony": "2.1.*",
+
         "doctrine/orm": ">=2.2.3,<2.4-dev",
         "doctrine/doctrine-bundle": "1.0.*",
+
         "twig/extensions": "1.0.*",
+
         "symfony/assetic-bundle": "2.1.*",
         "symfony/swiftmailer-bundle": "2.1.*",
         "symfony/monolog-bundle": "2.1.*",
+
         "sensio/distribution-bundle": "2.1.*",
         "sensio/framework-extra-bundle": "2.1.*",
         "sensio/generator-bundle": "2.1.*",
+
         "jms/security-extra-bundle": "1.2.*",
         "jms/di-extra-bundle": "1.1.*",
 
-        "mikemeier/php-node-bridge": "master",
-        "mikemeier/php-node-bridge-node-server": "master",
+        "mikemeier/php-node-bridge": "dev-master",
+        "mikemeier/php-node-bridge-node-server": "dev-master",
 
-        "phpunit/phpunit": "3.7.*",
         "mikey179/vfsStream": "dev-master"
     },
 
@@ -49,54 +54,5 @@
         "symfony-web-dir": "web"
     },
 
-    "repositories": [
-
-        {
-            "type": "package",
-            "package": {
-                "type": "symfony-bundle",
-                "autoload": {"psr-0": { "mikemeier\\PHPNodeBridge": "" }},
-                "target-dir": "mikemeier/PHPNodeBridge",
-                "version": "master",
-                "name": "mikemeier/php-node-bridge",
-                "source": {
-                    "url": "https://github.com/mikemeier/PHPNodeBridge.git",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
-        },
-
-        {
-            "type": "package",
-            "package": {
-                "type": "library",
-                "target-dir": "mikemeier/PHPNodeBridgeNodeServer",
-                "version": "master",
-                "name": "mikemeier/php-node-bridge-node-server",
-                "source": {
-                    "url": "https://github.com/mikemeier/PHPNodeBridge-NodeServer.git",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
-        },
-
-        {
-            "type": "package",
-            "package": {
-                "type": "symfony-bundle",
-                "autoload": {"psr-0": { "BeSimple\\DeploymentBundle": "" }},
-                "target-dir": "BeSimple/DeploymentBundle",
-                "version": "master",
-                "name": "ibrows/besimpledeployment",
-                "source": {
-                    "url": "git://github.com/ibrows/BeSimpleDeploymentBundle.git",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
-        }
-
-    ]
+    "repositories": []
 }
