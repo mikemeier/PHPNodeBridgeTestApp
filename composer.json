@@ -8,7 +8,7 @@
     "require": {
         "php": ">=5.3.3",
 
-        "symfony/symfony": "2.2.*",
+        "symfony/symfony": "2.1.*",
 
         "doctrine/orm": ">=2.2.3,<2.4-dev",
         "doctrine/doctrine-bundle": "1.0.*",
@@ -52,7 +52,5 @@
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web"
-    },
-
-    "repositories": []
+    }
 }
