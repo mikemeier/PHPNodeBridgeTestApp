@@ -9,6 +9,10 @@ use Symfony\Component\DependencyInjection\Loader;
 
 class mikemeierDemoPHPNodeBridgeExtension extends Extension
 {
+    /**
+     * @param array $configs
+     * @param ContainerBuilder $container
+     */
     public function load(array $configs, ContainerBuilder $container)
     {
         $configuration = new Configuration();
